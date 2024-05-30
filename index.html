@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a id="a1"  download="file.txt">Download CSV File</a>
+  </body>
+  <script>
+    const a1 = document.getElementById("a1");
+    a1.href = URL.createObjectURL("https://www.google.com/");
+  </script>
+</html>

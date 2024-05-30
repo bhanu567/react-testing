@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  font-family: tahoma;
+}
+form > div {
+  width: 100%;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+form > div > input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  border: 0px;
+}
+
+form > div > label {
+  position: absolute;
+  top: 0px;
+  line-height: 40px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.15s;
+}
+form > div > input:focus {
+  outline: 0px;
+}
+form > div > input:focus + label {
+  line-height: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+form > div > input:not(:placeholder-shown) + label {
+  line-height: 15px;
+  font-size: 10px;
+  color: green;
+  font-weight: bold;
+}

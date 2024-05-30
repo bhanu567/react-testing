@@ -1,0 +1,22 @@
+What is a BLOB :
+In JavaScript, a Blob (Binary Large Object) is an object that represents raw binary data(collection of bytes). It is commonly used to handle and manipulate binary data, such as images, audio, video, or other types of files. The Blob object allows you to create, modify, and manipulate binary data in a format that can be easily used with various web APIs.
+
+What is createObjectUrl do:
+The createObjectURL() method creates a DOMString containing a URL representing the object given in the parameter of the method. The new object URL represents the specified File object or Blob object.
+
+<a id='a1' download='file1.txt'>Download Text File</a>
+
+const a1 = document.getElementById("a1");
+const blob1 = new Blob(["Hello","Friends!", ], {type:"text/plain"});
+a1.href = URL.createObjectURL(blob);
+
+
+
+<a id='a2' download='file2.csv'>Download CSV File</a>
+const data=["hello", "gabre"]
+function makeCSV(rows){
+    return rows.map(r=>r.join(",")).join("\n");
+}
+const a2 = document.getElementById("a2");
+const blob2 = new Blob([makeCSV(data)]);
+a2.href = URL.createObjectURL(blob);
